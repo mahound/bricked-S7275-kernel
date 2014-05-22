@@ -6,6 +6,7 @@ export KBUILD_BUILD_USER=mahound
 export KBUILD_BUILD_HOST="CleanROM"
 VERSION=S7275R
 KERN_NAME_DIR=mahSARA-S7275-kernel
+date_str=`date '+%m%d%y_%H%M%S'`
 echo 
 echo "Cleaning previous build..."
 make clean
@@ -14,7 +15,6 @@ rm ~/$KERN_NAME_DIR/build/kernel-$VERSION.zip
 rm ~/$KERN_NAME_DIR/build/boot.img
 rm ~/$KERN_NAME_DIR/build/zImage
 rm ~/$KERN_NAME_DIR/build/zip/boot.img
-rm ~/$KERN_NAME_DIR/OUT/kernel-$VERSION.zip
 rm -rf ~/$KERN_NAME_DIR/build/zip/system/
 mkdir ~/$KERN_NAME_DIR/build/zip/system
 mkdir ~/$KERN_NAME_DIR/build/zip/system/lib
@@ -55,7 +55,7 @@ cd ~/$KERN_NAME_DIR/build/
 java -jar signapk.jar testkey.x509.pem testkey.pk8 kernel.zip kernel-$VERSION.zip
 echo
 echo "Copy zip file to OUT folder"
-cp -v ~/$KERN_NAME_DIR/build/kernel-$VERSION.zip ~/$KERN_NAME_DIR/OUT/kernel-$VERSION.zip
+cp -v ~/$KERN_NAME_DIR/build/kernel-$VERSION.zip ~/$KERN_NAME_DIR/OUT/kernel-$VERSION-$date_str.zip
 DATE_END=$(date +"%s")
 echo
 DIFF=$(($DATE_END - $DATE_START))
