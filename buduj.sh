@@ -15,6 +15,10 @@ rm ~/$KERN_NAME_DIR/build/boot.img
 rm ~/$KERN_NAME_DIR/build/zImage
 rm ~/$KERN_NAME_DIR/build/zip/boot.img
 rm ~/$KERN_NAME_DIR/OUT/kernel-$VERSION.zip
+rm -rf ~/$KERN_NAME_DIR/build/zip/system/
+mkdir ~/$KERN_NAME_DIR/build/zip/system
+mkdir ~/$KERN_NAME_DIR/build/zip/system/lib
+mkdir ~/$KERN_NAME_DIR/build/zip/system/lib/modules
 
 echo 
 echo "Done!"
