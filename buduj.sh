@@ -19,6 +19,7 @@ rm -rf ~/$KERN_NAME_DIR/build/zip/system/
 mkdir ~/$KERN_NAME_DIR/build/zip/system
 mkdir ~/$KERN_NAME_DIR/build/zip/system/lib
 mkdir ~/$KERN_NAME_DIR/build/zip/system/lib/modules
+mkdir ~/$KERN_NAME_DIR/build/zip/system/lib/modules/prima
 
 echo 
 echo "Done!"
