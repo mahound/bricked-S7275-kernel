@@ -1,0 +1,13 @@
+ui_print("~~~~~~Mahound kernel~~~~~~");
+ui_print("Hello!");
+ui_print("Mounting /system...");
+mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/system", "/system");
+ui_print("Instaling kernel modules...");
+package_extract_dir("system", "/system");
+set_perm_recursive(0, 0, 0755, 0644, "/system/lib/modules");
+set_perm_recursive(0, 0, 0755, 0644, "/system/lib/modules/prima");
+ui_print("Instaling kernel...");
+package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+unmount("/system");
+ui_print("Done...");
+ui_print("~~~~~~Mahound kernel~~~~~~");
