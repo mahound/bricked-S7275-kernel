@@ -1,4 +1,5 @@
 #!/bin/bash
+cp mahound_defconfig .config
 export CROSS_COMPILE=~/arm-cortex-a15-linaro-4.7.4/bin/arm-cortex_a15-linux-gnueabihf-
 export ARCH=arm
 export KBUILD_BUILD_USER=mahound
