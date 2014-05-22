@@ -4,7 +4,7 @@ export ARCH=arm
 export KBUILD_BUILD_USER=mahound
 export KBUILD_BUILD_HOST="CleanROM"
 VERSION=S7275R
-KERN_NAME_DIR=CleanROM-kernel
+KERN_NAME_DIR=mahSARA-S7275-kernel
 echo 
 echo "Cleaning previous build..."
 make clean
